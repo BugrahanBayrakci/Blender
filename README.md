@@ -100,3 +100,42 @@ Nesne  Boyutlandırma:
 4. S+Z : Z ekseninde nesneyi boyutlandır.
 
 Tüm bunları  N ile panelini açıp yapabilirsiniz.
+
+Nesne  isimlendirme:
+
+f2 tuşuna basıp kısaca isimlendirme yapılabili.
+
+Nesne Ekleme ekranı 
+
+Yukardan  add kısmından yada shift+a kombinasyonuna basarsanız nesne ekleme menüsü açılır.
+
+
+<img src="./assets/Addmenu.png" alt="alt yazı" width="300">
+
+
+### 3D CURSOR
+
+<img src="./assets/3D cursor.PNG" alt="alt yazı" width="250">
+
+Blender ekranında bu şekilde gözüken yapıya 3D cursor denir.
+
+* Blender’da sahneye bir nesne eklediğinde, bu nesne varsayılan olarak 3D Cursor’un bulunduğu konumda oluşturulur.
+
+* 3D Cursor, aynı zamanda döndürme, ölçekleme ve hizalama işlemlerinde pivot (merkez) noktası olarak da kullanılabilir
+
+
+<img src="./assets/3D cursor2.PNG" alt="alt yazı" width="500">
+
+Shift+s tuşuna basarsanız cursorın menüsü ekrana gelir bu ekrandan cursor ile alakalı işlemleri kısayollardan halledebilirsiniz.
+
+1.  Numara Cursoru sahnenin orjinine getirir.
+2.  Seçilen nesnenin merkezine getirir.
+3. Bir veya daha fazla nesne (veya vertex, edge, face) seçtiğinde, "aktif olan", yani en son seçtiğin öğe olur.
+"Cursor to Active", işte bu aktif öğenin merkezine 3D Cursor'u taşır.
+5. Diyelim ki cursor bir vertex'e veya nesneye göre ayarlandı ama küsüratlı koordinatlarda duruyor,Eğer 3D Cursor'u en yakın grid noktasına (tam sayı gibi) hizalamak istersen kullanırsın.
+5.
+6. Seçilen nesneleri grid'e hizalar. Alttaki ızgaralara denk gelecek şekilde ayarlar
+7. Cursor’a taşır ama  mesafeyi korur. Birden fazla nesneyi taşırken şeklin bozulmasını engeller.
+8. Seçilen nesneyi cursorün bulunduğu yere getir.
+
+
