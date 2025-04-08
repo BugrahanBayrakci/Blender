@@ -302,8 +302,7 @@ Transform Orientation (Dönüştürme Yönelimi), nesneleri veya vertex/edge/fac
 Blender'da Pivot Point, bir nesneyi döndürürken (R), ölçeklerken (S) veya başka bir dönüşüm yaparken referans alınacak merkezi belirler.
 
 
- <img src="./assets/pivotpoint.png
-" alt="alt yazı" width="500">
+ <img src="./assets/pivotpoint.png" alt="alt yazı" width="500">
 
 | **Pivot Türü**          | **Açıklama**                                                                 |
 |--------------------------|------------------------------------------------------------------------------|
