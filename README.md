@@ -1,4 +1,4 @@
-# Blender
+# Blender Arayüz 
 ### Giriş
  Blender özgür,açık kaynak kodlu 3D modelleme aracıdır. 
 
@@ -139,3 +139,52 @@ Shift+s tuşuna basarsanız cursorın menüsü ekrana gelir bu ekrandan cursor i
 8. Seçilen nesneyi cursorün bulunduğu yere getir.
 
 
+## Gizmo ve Overlays
+**Overlay**
+
+ Overlay Nedir?
+Overlay terimi, Blender’da sahnede görünen bazı görsel yardımcı araçları ifade eder. Bu araçlar, sahnede çalışma yaparken yardımcı olur ve daha fazla kontrol sağlar. Overlay'ler, ekstra bilgilere ve görsel rehberlere ulaşmanı sağlar.
+
+
+
+Overlay’in Kapsadığı Öğeler:
+
+-  Mesh Görünümü (Wireframe/Surface): Modelin üzerindeki poligonları, kenarları ya da yüzeyleri gösterebilir.
+
+- Grid/Izgara: Sahnede yer alan grid ve ızgara çizgilerinin görünürlüğünü kontrol eder.
+
+- Object Origins: Nesnelerin başlangıç noktalarının (origin) görünürlük ayarlarını kontrol eder.
+
+- Normals: Nesnelerin yüzey normal çizgilerini (yüzey yönünü gösterir) görmek için kullanılır.
+
+- Edge Lengths: Kenar uzunluklarını gösterir.
+
+- Annotations: Çizimler, notlar ekleyebilirsin.
+
+**Gizmo**
+
+Gizmo, Blender’da nesneleri etkileşimli olarak taşımanızı, döndürmenizi ve ölçeklendirmenizi sağlayan görsel araç kümesidir. Gizmo’lar, manipülasyon işlemlerini kolaylaştırır.
+
+
+Nesnenin, objenin veya seçim kutusunun etrafındaki görsel kılavuzlar (oklar ve çubuklar) etkileşime girerek nesneleri hareket ettirmeni sağlar.
+
+Gizmo’a Ait Temel Araçlar:
+
+* Move Gizmo (Taşıma): Yön oklarıyla nesneyi X, Y ve Z eksenlerinde hareket ettirmeni sağlar.
+
+* Rotate Gizmo (Dönme): Nesneyi X, Y ve Z eksenlerinde döndürmek için dairesel oklar kullanır.
+
+* Scale Gizmo (Ölçek): Nesnenin boyutlarını X, Y ve Z eksenlerinde değiştirmek için kullanılabilir.
+
+
+**Shading**
+
+Shading, Blender gibi 3D yazılımlarında bir modelin yüzeyine nasıl ışık düşeceğini ve nasıl görüneceğini belirleyen bir tekniktir. Yani, shading bir nesnenin ışık ve gölge oyunlarıyla nasıl görüneceğini ayarlamaya yarar.
+
+Blender'da shading ile ilgili genelde iki ana şey konuşulur:
+
+Nesnelerin ışıkla nasıl etkileşime gireceği (Yüzey gölgeleme).
+
+Şekillerin ve materyallerin görünümünü ayarlama.
+
+<img src="./assets/sagüstmenu.PNG" alt="alt yazı" width="500">
