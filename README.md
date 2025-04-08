@@ -187,4 +187,33 @@ Nesnelerin ışıkla nasıl etkileşime gireceği (Yüzey gölgeleme).
 
 Şekillerin ve materyallerin görünümünü ayarlama.
 
-<img src="./assets/sagüstmenu.PNG" alt="alt yazı" width="500">
+<img src="./assets/sagüstmenu.PNG" alt="alt yazı" width="600">
+
+Sahne nesnelerinden sahne üzerinde istediğiniz türden öğelerin görünümünü kapatabilirsiniz.
+
+* Gizmo Öğelerinden gizmoyla alakalı yerleri kapatabilirsiniz.
+
+* Overlay Öğeerinden overlay ile alakalı yerleri kapatabilirsiniz.
+
+* X-ray açarak nesnelerin arka tarafının görünmesini sağlayabilirsiniz.
+
+* Shading Ayarları
+
+   1. Nesnelerin bağlantı noktalarını gösteren kısmı açar. Bu ayarda nesne bağlantılarında problem olup olmadığını algılanır.
+   2.  Mataryalsiz ham halinin gözükmesini seçer.
+   3. Mataryal ile birlikte görünmesini gösterir.
+   4. Işığa nesnenin nasıl tepki verdiğini gösterir.
+
+
+---
+
+
+
+<img src="./assets/hiyerarşi.PNG" alt="alt yazı" width="300">
+
+Burası hiyerarşi kısmı buradan sahneye eklenen nesneleri görebilirsiniz.
+
+
+<img src="./assets/Ozellikler.PNG" alt="alt yazı" width="200">
+ 
+ Hemen altındaki bu kısım nesnelerin özelliklerini gösteren kısımdır.
