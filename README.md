@@ -208,8 +208,9 @@ Sahne nesnelerinden sahne üzerinde istediğiniz türden öğelerin görünümü
 ---
 
 
+<img src="./assets/hiyerarşi.png" alt="alt yazı" width="200">
 
-<img src="./assets/hiyerarşi.PNG" alt="alt yazı" width="300">
+
 
 Burası hiyerarşi kısmı buradan sahneye eklenen nesneleri görebilirsiniz.
 
@@ -217,3 +218,99 @@ Burası hiyerarşi kısmı buradan sahneye eklenen nesneleri görebilirsiniz.
 <img src="./assets/Ozellikler.PNG" alt="alt yazı" width="200">
  
  Hemen altındaki bu kısım nesnelerin özelliklerini gösteren kısımdır.
+
+
+
+ Blenderda birden fazla mod bulunmaktadır.
+
+ ## BLENDER MODLARI
+
+ <img src="./assets/blendermods1.PNG" alt="alt yazı" width="800">
+
+***Mavi ile işaretlenmiş yerden modları değiştirebiliyoruz.***
+
+### Modlar:
+
+
+| **Mod Adı**              | **Ne Yapar?**                                                                                                                                         | **Ne Zaman Kullanılır?**                                                            |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| **Object Mode**  | Nesneleri taşır, döndürür, ölçeklendirir.| Nesnelerle temel işlem yapmak için.                                                 |
+| **Edit Mode**             | Nesnenin vertex, kenar ve yüzeylerini düzenler.| Modelleme , detaylı düzenlemeler ve şekil vermek için.                                             |
+| **Sculpt Mode**           | Modeli heykel gibi |  Organik şekiller, karakterler veya karmaşık yüzeyler oluştururken kullanılır.                                     |
+| **Vertex Paint Mode**     | Nesnenin vertex'lerine renk ekler.| Nesnenin renk detaylarını düzenlerken ve dokusunu oluştururken kullanılır.                                             |
+| **Weight Paint Mode**  | Rigging (kemik sistemi) sırasında kemiklerin ağırlıklarını düzenler.   | Karakter rigging ve animasyonlarında.                                               |
+| **Texture Paint Mode**    | Modelin yüzeyine doku ekler ve bu dokuları fırça ile boyar.                                                                                          | Modelin üzerine renk ve desen eklemek için kullanılır.                             |
+|
+
+
+<hr style="border: 2px solid black;">
+
+### EDİT MODE
+
+| **Kısayol**        | **İşlevi**                                |
+|--------------------|-------------------------------------------|
+| `Tab`              | Object ↔ Edit Mode geçişi                 |
+| `1` / `2` / `3`    | Vertex / Edge / Face seçim modları       |
+| `A`                | Hepsini seç veya seçimi kaldır            |
+| `B`                | Box Select (dikdörtgen seçim)             |
+| `C`                | Circle Select (daire seçim)               |
+| `L`                | Hoverlanan parçayı seç                    |
+| `Ctrl + L`         | Seçili vertex'e bağlı tüm parçaları seç   |
+| `X` / `Delete`     | Silme seçenekleri                         |
+| `E`                | Extrude (çıkıntı oluştur)                 |
+| `I`                | Inset (içe yüzey)                         |
+| `F`                | Yüzey oluştur                             |
+| `M` / `Alt + M`    | Merge (birleştir)                         |
+| `G`                | Taşı (Grab)                               |
+| `R`                | Döndür (Rotate)                           |
+| `S`                | Ölçekle (Scale)                           |
+| `Ctrl + R`         | Loop Cut (kenar boyunca kesme)           |
+| `Ctrl + B`         | Bevel (kenar yumuşatma)                  |
+| `K`                | Knife Tool (kesme aracı)                 |
+| `Alt + S`          | Normale göre ölçekle                     |
+| `Shift + D`        | Kopyala (Duplicate)                      |
+| `Alt + D`          | Bağlı kopya (Linked Duplicate)           |
+| `P`                | Seçimi ayrı nesne yap (Separate)         |
+| `Shift + S`        | Snap menüsü                              |
+| `.` (nokta)        | Pivot Point ayarı                        |
+| `O`                | Proportional Editing aç/kapat            |
+| `H` / `Alt + H`    | Gizle / Göster                           |
+| `Ctrl + F`         | Yüzey menüsü                             |
+| `U`                | UV Mapping menüsü                        |
+
+### Transform Orientations
+
+Transform Orientation (Dönüştürme Yönelimi), nesneleri veya vertex/edge/face’leri taşırken (G), döndürürken (R) ya da ölçeklerken (S) hangi yönü referans alacağını belirler.
+
+
+ <img src="./assets/TRANSFORMORİENTATİON.PNG" alt="alt yazı" width="500">
+
+
+
+| **Orientation** | **Açıklama**                                                                 |
+|------------------|------------------------------------------------------------------------------|
+| **Global**       | Dünya eksenlerine göre (X, Y, Z)                                             |
+| **Local**        | Nesnenin kendi yönelimine göre (nesne döndürülmüşse eksen de döner)         |
+| **Normal**       | Seçili yüzeyin veya vertex'in yüzey normallerine göre yönlenir              |
+| **Gimbal**       | Rotasyon açılarının (Euler) matematiksel görünümünü verir (animasyon için)  |
+| **View**         | Kameranın (bakış açısının) yönüne göre                                      |
+| **Cursor**       | 3D Cursor yönelimi baz alınır                          |
+| **Custom**       | Kendi özel yönelimini tanımlayarak kullanabilirsin                          |
+
+### Pivot Point
+
+Blender'da Pivot Point, bir nesneyi döndürürken (R), ölçeklerken (S) veya başka bir dönüşüm yaparken referans alınacak merkezi belirler.
+
+
+ <img src="./assets/pivotpoint.png
+" alt="alt yazı" width="500">
+
+| **Pivot Türü**          | **Açıklama**                                                                 |
+|--------------------------|------------------------------------------------------------------------------|
+| **Bounding Box Center**  | Seçilen nesne veya elemanların kutu gibi çevresini sarar, ortasını referans alır |
+| **Median Point**         | Seçimin ağırlıklı (ortalama) merkezini referans alır(sağ ve solda nesneler var dersek en çok nesnenin olduğu tarafı referans alır.)                          |
+| **Individual Origins**   | Her nesne veya parçanın kendi merkezine göre işlem yapılır                    |
+| **3D Cursor**            | Dönüşüm 3D Cursor noktasına göre yapılır                                     |
+| **Active Element**       | Seçimdeki aktif (en son seçilen) elemana göre dönüşüm yapılır.(Genellikle rengi farklıdır.)               |
+
+***NOT:NUMPAD ALTINDAKİ VİRGÜL NESNEYE YAKINLAŞMAYI SAĞLAR.**
