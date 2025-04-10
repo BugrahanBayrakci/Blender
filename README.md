@@ -313,3 +313,100 @@ Blender'da Pivot Point, bir nesneyi döndürürken (R), ölçeklerken (S) veya b
 | **Active Element**       | Seçimdeki aktif (en son seçilen) elemana göre dönüşüm yapılır.(Genellikle rengi farklıdır.)               |
 
 ***NOT:NUMPAD ALTINDAKİ VİRGÜL NESNEYE YAKINLAŞMAYI SAĞLAR.**
+
+
+### Snapping 
+Objeleri birbirine tutturmayı sağlar.
+
+
+ <img src="./assets/snapping.png" alt="alt yazı" width="300">
+
+Snappingi açmak için mıknatıs sembolüne tıklayın mavi olarak işaretlendiğinde aktif olur.
+
+Snapping hizalama işine yarar.
+
+* Increment: Izgaraya göre hizalama.Yerdeki ızgaralara göre hizalama işlemi yapar sadece move açık bir birim bir birim ilerler.
+
+
+
+ <img src="./assets/snapping2.png" alt="alt yazı" width="300">
+
+
+* Vertex: Diğer objelerin veya vertex’lerin uç noktalarına hizalama yapar.
+
+
+
+* Edge: Kenarlara hizalama yapar. Yani, objenin bir kenarını başka bir objenin kenarına sabitleyebilirsiniz.
+
+* Face: Yüzeylere hizalama yapar. Bu modda, bir yüzeyi başka bir yüzeye yerleştirebilirsiniz. Tam olarak yüzeye tutturma vs.
+
+* Face Nearest kendisine en yakın yüzeye tutun.
+
+* Volume: 3D hacme göre hizalama. Hacimlerin merkezi veya kenarlarına snap yapar. Rigleme işleminde
+
+* Edge Center kenarının tam orta noktasına getirir.
+
+* Egge Perpendicular bu özellikte seçtiğiniz noktanın diğer nesnenin yüzeyindeki en yakın noktaya snap ettirir.s
+
+
+#### SNAP WİTH:
+Closest (En Yakın): Objeyi hedef yüzeye mümkün olan en kısa mesafeden yapıştırır.
+
+Center (Merkez): Objeyi, tam merkez noktasını hedef yüzeye yapıştıracak şekilde hizalar.
+
+Median (Orta Nokta): Objenin geometrik orta noktasını hedef alır.
+
+Active (Etkin): Seçili aktif objenin belirli bir noktasına odaklanır.
+
+#### TARGET SECTİON
+
+Include Active: Aktif olarak seçilen objeyi yapıştırma işlemine dahil eder. Bu, özellikle birden fazla obje üzerinde çalışıyorsanız ve belirli bir objeyi etkili şekilde hizalamak istiyorsanız faydalıdır.
+
+Exclude Non-Selectable: Seçilemez olan objeleri yapıştırma işleminden hariç tutar. Bu, karmaşık sahnelerde gereksiz objelerin dikkate alınmamasını sağlar.
+
+Backface culling: Bir nevi aç kapat snappingi.
+
+Project individual elements: Birden fazla öğe seçince her öğe kendine göre yön tayin etmesini sağlar.
+
+
+Shift tuşuna basarak hepsini seçebilir.
+
+
+### Proportional Editing
+
+Bu özellik sayesinde, bir vertex, edge ya da face'i hareket ettirdiğinde, etrafındaki diğer nesneler  de belirli bir etki alanı içinde  bir şekilde bu harekete katılır. 
+
+ <img src="./assets/proportional editing.png" alt="alt yazı" width="300">
+
+* Bir vertex, edge ya da face seç.
+
+* O tuşuna basarak Proportional Editing'i aktif et (aynı tuşla kapatılır).
+
+* G (taşı), R (döndür), S (ölçek) gibi komutları kullan.
+
+* Fare tekerleğiyle etki alanını büyütüp küçültebilirsin.
+
+
+Ne zaman kullanılır?
+
+1 Yüzeyleri doğal eğimlerle şekillendirmek.
+
+2 Dağ, tepe gibi organik şekiller oluşturmak.
+
+3 Karakter modellemede kas, yüz hatları gibi detayları düzenlemek.
+
+
+### Extrude Region (E)
+
+ <img src="./assets/exturede.png" alt="alt yazı" width="300">
+
+Exturede modu açmak için edit modda 1 numaralı kısma basılı tutun.
+
+ <img src="./assets/exturde.png" alt="alt yazı" width="300">
+
+ :large_blue_circle:  Extrude Region (E) Seçilen geometriyi tek parça olarak dışa doğru uzatır.
+
+ :large_blue_circle: Extrude Manifold Yüzeyleri extrude ederken gereksiz kenarları otomatik temizler.Topolojiyi bozmadan düzgün extrude yapmak için idealdir.Kesik/kırık mesh'lerde işe yarar.
+ :large_blue_circle:  
+
+ :large_blue_circle: Extrude Along Normals Birden fazla seçilen yüzeyleri kendi normallerindeki eksenlere göre extrude etmek için kullanır. Her bir yüzey kendine göre exturede olur.
