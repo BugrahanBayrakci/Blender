@@ -407,6 +407,7 @@ Exturede modu açmak için edit modda 1 numaralı kısma basılı tutun.
  :large_blue_circle:  Extrude Region (E) Seçilen geometriyi tek parça olarak dışa doğru uzatır.
 
  :large_blue_circle: Extrude Manifold Yüzeyleri extrude ederken gereksiz kenarları otomatik temizler.Topolojiyi bozmadan düzgün extrude yapmak için idealdir.Kesik/kırık mesh'lerde işe yarar.
- :large_blue_circle:  
 
  :large_blue_circle: Extrude Along Normals Birden fazla seçilen yüzeyleri kendi normallerindeki eksenlere göre extrude etmek için kullanır. Her bir yüzey kendine göre exturede olur.
+
+ :large_blue_circle: Extrude to Cursor mouse imlecini parça parça tıklayarak uzattırma yapılabilir.
