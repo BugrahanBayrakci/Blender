@@ -412,3 +412,25 @@ Exturede modu açmak için edit modda 1 numaralı kısma basılı tutun.
  :large_blue_circle: Extrude Along Normals Birden fazla seçilen yüzeyleri kendi normallerindeki eksenlere göre extrude etmek için kullanır. Her bir yüzey kendine göre exturede olur.
 
  :large_blue_circle: Extrude to Cursor mouse imlecini parça parça tıklayarak uzattırma yapılabilir.
+
+
+ ### Inset 
+Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru yeni yüzeyler oluşturmanı sağlar.
+
+ <img src="./assets/Inset.png" alt="alt yazı" width="300">
+
+ <img src="./assets/Inset2.png" alt="alt yazı" width="300">
+
+| Ayar / Kısayol       | Açıklama                                                                 |
+|----------------------|--------------------------------------------------------------------------|
+| `I`                  | Seçili yüzey(ler)i içe doğru inset yapar.                               |
+| `I` + `I` (İki kez)  | Çoklu yüzeylerde her yüzey için ayrı ayrı inset yapılır (Individual).   |
+| `Thickness`          | İnset mesafesini belirler (kenardan ne kadar içeride olacak).           |
+| `Depth`              | Yüzeyi içeriye veya dışarıya doğru extrude benzeri bir hareketle iter.  |
+| `Boundary`           | Sınırda bulunan yüzeylerin inset olup olmayacağını belirler.    Kısacak başka kenarla bağlantısı olmayan kenarı açarsan inset eder .        |
+| `Outset`             | İçeri değil dışarı doğru inset yapar (büyütme gibi düşün).              |
+| `Offset Relative`    | İnset oranını kenar uzunluğuna göre ayarlar. Daha düzgün bir geometri.                           |
+| `Offset Even`    | Kalınlığı artırmayı sağlar.           |
+| `Edge Rail`          |  Inset yapınca yüzeyin birebir aynı doğrultuda olmasını sağlar    |
+|`Select Outer`| Inset edilen yüzeyin dışınaki yüzeyi seçmeyi sağlar.
+| ` Individual` | Her yüzen kendi bulunduğu yerde Inset olur|
