@@ -265,6 +265,7 @@ Burası hiyerarşi kısmı buradan sahneye eklenen nesneleri görebilirsiniz.
 | `R`                | Döndür (Rotate)                           |
 | `S`                | Ölçekle (Scale)                           |
 | `Ctrl + R`         | Loop Cut (kenar boyunca kesme)           |
+| `Shift+z+0`| Loop Cutı düzleme|
 | `Ctrl + B`         | Bevel (kenar yumuşatma)                  |
 | `K`                | Knife Tool (kesme aracı)                 |
 | `Alt + S`          | Normale göre ölçekle                     |
