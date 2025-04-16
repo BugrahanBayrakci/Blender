@@ -434,3 +434,104 @@ Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru 
 | `Edge Rail`          |  Inset yapınca yüzeyin birebir aynı doğrultuda olmasını sağlar    |
 |`Select Outer`| Inset edilen yüzeyin dışınaki yüzeyi seçmeyi sağlar.
 | ` Individual` | Her yüzen kendi bulunduğu yerde Inset olur|
+
+
+### Bevel Aracı CTRL+B
+Köşelere yuvarlaklık vermeyi sağlar.
+
+ <img src="./assets/bavel.PNG" alt="alt yazı" width="250">
+
+#### Affect (Etki Alanı):
+
+* Vertices (Köşeler): Sadece köşeleri eğimlendirir. Kenarlar olduğu gibi kalır.
+
+* Edges (Kenarlar): Kenarları eğimlendirir, bu da köşelerin de etkilenmesine yol açar. Şu anda "Vertices" seçili.
+
+#### Width Type
+ Verilen eğimlerin biriminin nasıl ölçüleceğini gösterir.
+
+ *  Offset Mesafe ile ölç. Yeni oluşan eğimli yüzeyin orijinal kenardan olan mesafesini ifade eder.
+ *  Width Toplam Genişlik ölçümü.
+ *  Percent Yüzde değeri ile ölçme.
+ *  Absolute Mutlak değer ile ölç.
+ *  Depth Derinlik ile ölç.
+
+ #### Segments (Segmentler): 
+ 
+ Eğimli yüzey boyunca kaç tane alt  segment olacağını belirler. Daha fazla segment yuvarlaklığı artırır.
+
+ #### Shape (Şekil): 
+ 
+ Eğimin profilinin ne kadar içbükey veya dışbükey olacağını kontrol eden bir değerdir. 0.5 değeri dairesel bir eğim oluşturur. 0'a yakın değerler daha düz, 0'dan küçük değerler ise içbükey bir şekil verir. 
+
+  #### Material Index (Materyal İndeksi): 
+  Oluşturulan yeni eğimli yüzeylere hangi materyalin atanacağını belirler. Mataryalin buradan indeks numarasını girilir.
+
+
+  **Harden Normals**: Etkinleştirildiğinde, eğimli yüzeylerin normal vektörleri komşu yüzeylere uyacak şekilde ayarlanır ve komşu yüzeylerin normalleri etkilenmez. Bu, komşu yüzeylerin düz kalmasını  ve eğimli yüzeylerin onlara yumuşak bir şekilde geçiş yapmasını sağlar. Smooth özelliğinin aynısıdır.
+
+**Clamp Overlap**: Etkinleştirildiğinde, eğimli kenarların genişliği, diğer  çakışmaları önleyecek şekilde sınırlandırılır.
+
+**Loop Slide (Döngü Kaydırma)**: Bir köşeye hem eğimli hem de eğimsiz kenarlar geliyorsa, eğimin mümkün olduğunca bu eğimsiz kenarlar boyunca kaymasını sağlar. Bu seçeneğin kapatılması daha eşit eğim genişliklerine yol açabilir.
+
+
+#### Mark (İşaretle) Ayarları
+
+**Seams Dikiş**: Etkinleştirilirse, yeni oluşturulan eğimli kenarlar UV açma işlemi için dikiş olarak işaretlenir.
+
+**Sharp (Keskin)**: Etkinleştirilirse, yeni oluşturulan eğimli kenarlar keskin kenarlar olarak işaretlenir. Bu, gölgelendirme sırasında bu kenarların yumuşatılmamasını sağlar.
+Miter (Gönye) Ayarları
+
+
+Miter Outer (Dış Miter) Türleri:
+1. Sharp (Keskin)
+Köşeleri keskin bırakır, bevel’ler sadece birleşir.
+
+Az poligonlu ve temiz görünür ama çok keskin köşelerde garip görünebilir.
+
+2. Patch (Yama)
+Köşeye ekstra yüzeyler ekleyerek orayı daha yumuşak bir geçişle doldurur.
+
+Daha pürüzsüz görünüm sağlar, shading hatalarını azaltır.
+
+3. Arc (Yay)
+Köşeleri yay biçiminde, kıvrımlı bir şekilde birleştirir.
+
+
+
+**Intersection Type (Kesişim Tipi)**: 
+
+1. Grid Fill (Izgara Doldurma) 
+Kesişim alanını düzgün bir ızgara yapısıyla doldurur.
+
+Temiz ve düzenli topoloji üretir.
+
+2. Cutoff (Kesim) ✂️
+Kesişim bölgesini sert bir şekilde keser.
+
+Karmaşık köşelerde bozulmalara ya da deliklere neden olabilir.
+
+Bazen düşük poligonlu işler için tercih edilebilir.
+
+
+
+**Face Strength**: Face Strength, bir yüzün “önem düzeyini” belirtir. Blender bunu “Weighted Normal” (Ağırlıklı Normaller) ile birlikte kullanır.
+Bu sayede shading (gölgelendirme) düzgün görünür, özellikle sert kenarlar ve otomatik smoothing ayarlarında etkisini gösterir.
+
+✅None
+Bevel sonrası hiçbir yüz için özel bir güç seviyesi ayarlanmaz.
+
+✅ New
+Sadece yeni oluşturulan yüzler “Medium” seviyesinde atanır.
+
+✅ Affect Only
+Sadece zaten “Medium” veya “Strong” olan yüzler etkilenir.
+
+✅ All
+Tüm bevel sonucu yüzler “Medium” olur.
+
+**Profile Type (Profil Tipi)**:
+
+Superellipse: Hızlı ve kolay yumuşak bevel’ler. Sert ya da yumuşak geçişler için idealdir.
+
+Custom: Karmaşık ve özgün geçiş isteyen modellerde — örneğin pencere çerçeveleri, özel kalıplar, dekoratif kenarlar vs.
