@@ -417,9 +417,12 @@ Exturede modu açmak için edit modda 1 numaralı kısma basılı tutun.
  ### 2 numara Inset 
 Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru yeni yüzeyler oluşturmanı sağlar.
 
- <img src="./assets/Inset.png" alt="alt yazı" width="300">
+ <img src="./assets/inset.png" alt="alt yazı" width="300">
 
- <img src="./assets/Inset2.png" alt="alt yazı"width="300">
+Inset
+
+
+
 
 | Ayar / Kısayol       | Açıklama                                                                 |
 |----------------------|--------------------------------------------------------------------------|
@@ -434,6 +437,11 @@ Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru 
 | `Edge Rail`          |  Inset yapınca yüzeyin birebir aynı doğrultuda olmasını sağlar    |
 |`Select Outer`| Inset edilen yüzeyin dışınaki yüzeyi seçmeyi sağlar.
 | ` Individual` | Her yüzen kendi bulunduğu yerde Inset olur|
+
+ <img src="./assets/Inset2.png" alt="alt yazı" width="300">
+
+
+
 
 
 ### 3 numara Bevel Aracı CTRL+B
