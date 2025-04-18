@@ -419,7 +419,7 @@ Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru 
 
  <img src="./assets/Inset.png" alt="alt yazı" width="300">
 
- <img src="./assets/Inset2.png" alt="alt yazı" width="300">
+ <img src="./assets/Inset2.png" alt="alt yazı"width="300">
 
 | Ayar / Kısayol       | Açıklama                                                                 |
 |----------------------|--------------------------------------------------------------------------|
