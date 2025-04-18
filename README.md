@@ -264,7 +264,7 @@ Burası hiyerarşi kısmı buradan sahneye eklenen nesneleri görebilirsiniz.
 | `G`                | Taşı (Grab)                               |
 | `R`                | Döndür (Rotate)                           |
 | `S`                | Ölçekle (Scale)                           |
-| `Ctrl + R`         | Loop Cut (kenar boyunca kesme)           |
+| `Ctrl + R`         | Loop Cut (kenar boyunca kesme)(S+Z ile araları genişletebilirsin.)           |
 | `Shift+z+0`| Loop Cutı düzleme|
 | `Ctrl + B`         | Bevel (kenar yumuşatma)                  |
 | `K`                | Knife Tool (kesme aracı)                 |
@@ -397,7 +397,7 @@ Ne zaman kullanılır?
 3 Karakter modellemede kas, yüz hatları gibi detayları düzenlemek.
 
 
-### Extrude Region (E)
+### 1 numara Extrude Region (E)
 
  <img src="./assets/exturede.png" alt="alt yazı" width="300">
 
@@ -414,7 +414,7 @@ Exturede modu açmak için edit modda 1 numaralı kısma basılı tutun.
  :large_blue_circle: Extrude to Cursor mouse imlecini parça parça tıklayarak uzattırma yapılabilir.
 
 
- ### Inset 
+ ### 2 numara Inset 
 Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru yeni yüzeyler oluşturmanı sağlar.
 
  <img src="./assets/Inset.png" alt="alt yazı" width="300">
@@ -436,7 +436,7 @@ Inset aracı, Blender’da modelleme yaparken yüzeylerin (faces) içine doğru 
 | ` Individual` | Her yüzen kendi bulunduğu yerde Inset olur|
 
 
-### Bevel Aracı CTRL+B
+### 3 numara Bevel Aracı CTRL+B
 Köşelere yuvarlaklık vermeyi sağlar.
 
  <img src="./assets/bavel.PNG" alt="alt yazı" width="250">
@@ -535,3 +535,129 @@ Tüm bevel sonucu yüzler “Medium” olur.
 Superellipse: Hızlı ve kolay yumuşak bevel’ler. Sert ya da yumuşak geçişler için idealdir.
 
 Custom: Karmaşık ve özgün geçiş isteyen modellerde — örneğin pencere çerçeveleri, özel kalıplar, dekoratif kenarlar vs.
+
+### 7 numara Spin
+Spin aracı, seçtiğin nesneyi bir eksen etrafında belirli bir açıyla ve belirli sayıda kopyalayarak döndürür. Böylece o eksen etrafında dönen bir şekil ortaya çıkar. O eksende 3D cursordür.
+
+
+ <img src="./assets/spin2.PNG" alt="alt yazı" width="250">
+
+ <img src="./assets/spin1.PNG" alt="alt yazı" width="250">
+
+Bardak kulpu gibi nesneler oluşturulabilir.
+
+
+ <img src="./assets/spin3.png" alt="alt yazı" width="250">
+
+🔵 Steps (Adımlar): Bu değer, orijinal nesnenin kaç tane kopyasının oluşturulacağını belirler. Görseldeki örnekte 12 olarak ayarlanmış, yani orijinal nesne dahil olmak üzere toplamda 12 kopya (11 yeni kopya) oluşturulacak ve bunlar belirtilen açıya göre döndürülerek yerleştirilecektir.
+
+🔵 Use Duplicates (Kopyaları Kullan): Bu seçenek işaretlendiğinde, döndürme işlemi sırasında orijinal nesnenin gerçek kopyaları oluşturulur. İşaretlenmediğinde ise, döndürme işlemi sadece orijinal nesnenin geometrisini deforme ederek bir "döndürülmüş" görünüm elde etmeye çalışır. Genellikle çoğaltma isteniyorsa bu seçenek işaretli bırakılır.
+
+🔵 Angle (Açı): Bu, her bir adımda nesnenin ne kadar döndürüleceğini belirtir. Görselde -83.3° olarak ayarlanmış. Negatif değer, döndürme yönünün saat yönünün tersine olacağı anlamına gelir. Pozitif bir değer saat yönünde döndürme yapar. 
+
+🔵 Auto Merge (Otomatik Birleştirme): Bu kutucuk işaretliyse, döndürme işlemi sonucunda üst üste gelen veya birbirine çok yakın olan noktalar otomatik olarak birleştirilir. Bu, özellikle kapalı ve düzgün yüzeyler oluşturmak istendiğinizde faydalıdır (örneğin bir vazo veya silindir oluştururken).
+
+🔵 Flip Normals (Normalleri Çevir): Nesnelerin yüzeylerinin "dışarı" veya "içeri" baktığını belirleyen normal vektörleri vardır. Bu seçenek işaretlendiğinde, oluşturulan kopyaların normal vektörleri ters çevrilir. 
+
+🔵 Center (Merkez): Bu bölüm, döndürme işleminin hangi nokta etrafında gerçekleşeceğini belirler. X, Y ve Z değerleri, global koordinat sisteminde veya nesnenin kendi yerel koordinat sisteminde (bağlı olduğu nesneye göre) döndürme merkezinin konumunu ifade eder. 
+
+🔵 Axis (Eksen): Bu bölüm, döndürme işleminin hangi eksen etrafında gerçekleşeceğini belirler. X, Y ve Z değerleri, döndürme ekseninin yönünü tanımlayan bir vektördür. Görselde X ve Y 0.000, Z ise -1.000 olarak ayarlanmış. 
+
+
+### 8 numara Smooth & Randomize
+
+
+🔵 Smooth (Yumuşatma):  Gismoyu Yüzey üzerinde hareket ettirdikçe, yakındaki noktaların konumlarını ortalayarak daha akıcı ve düzgün bir görünüm elde etmenizi sağlar. Özellikle detay ekledikten sonra yüzeyi genel olarak pürüzsüzleştirmek veya hatalı bölgeleri düzeltmek için sıkça kullanılır.
+
+🔵 Randomize (Rastgeleleştirme): Bu fırça ise yüzeydeki noktaların konumlarını rastgele bir şekilde değiştirir. Bu, yüzeye doğal olmayan, düzensiz bir doku veya bozulma efekti vermek için kullanılabilir. Örneğin, kayalık bir yüzey oluştururken veya bir nesnenin yıpranmış görünmesini sağlarken faydalı olabilir.
+
+### 9 numara Slide
+ <img src="./assets/spin3.png" alt="alt yazı" width="250">
+
+
+
+Edge slide :
+Bir kenarı, bağlı olduğu geometri boyunca kaydırmanı sağlar. Yani “kenarı tut, yerini değiştir ama yüzeyi bozmadan” hareket ettir.
+
+Vertex Slide :Benzer mantık, ama vertex (nokta) için. Yani vertex’i, bağlı olduğu kenar veya yüzey boyunca kaydırmak.
+
+ ### 10 Edge & Vertex Slide
+ <img src="./assets/edge.png" alt="alt yazı" width="250">
+
+ 
+ bir kenar ve nokta arasında kaydırma işlemi yapmımızı sağlıyor. 
+
+🔵 Even E Kenar döngüsünü komşu kenar döngüsünün şekliyle eşleşecek şekilde zorlar. F tuşuna basarak karşıt köşeye geçebilirsiniz.
+
+🔵 Flipped F karşısındaki kenarların doğrultusunda yapıyor.
+
+🔵 Clamp Alt veya C Kaydırmayı kenar sınırları içinde sabitlemeyi açıp kapatır.
+
+🔵 Factor Gerçekleştirilen kaydırma miktarını belirler. Negatif değerler bir yüze doğru kaydırmalara, pozitif değerler ise diğerine atıfta bulunur.
+
+
+🔵 Mirror Editing İşlemi ağın simetrik elemanlarına (varsa, yerel X yönünde) yaymanıza olanak tanır.
+
+🔵 Correct UVs Eğer mevcutsa, görüntü bozulmalarını önlemek için ilgili UV koordinatlarını düzeltir.
+
+### 10 numara  Shrink/Fatten 
+
+Seçili yüzeyleri yüzey normalleri boyunca içeriye ya da dışarıya doğru hareket ettirmeni sağlar. Özellikle kalınlık verme ya da yüzeyleri genişletip daraltmak için çok kullanışlıdır.
+
+Shrink (Daralt): Yüzeyleri içeri doğru çeker.
+
+Fatten (Şişir): Yüzeyleri dışarı doğru iter.
+
+Bu işlem "normale göre" çalışır. Yani her yüzey kendi yönüne göre hareket eder.
+
+📌 Kısayol:
+Alt + S tuşlarına bastığında aktif olur.
+
+ <img src="./assets/fattern.png" alt="alt yazı" width="250">
+
+
+🔹 Offset
+Ne kadar şişirileceğini veya daraltılacağını belirler.
+
+Pozitif değer: Dışa doğru (şişirme)
+
+Negatif değer: İçe doğru (daraltma)
+
+🔹 Offset Even
+Hareketin her yönde eşit olmasını sağlar.
+
+Bu sayede yüzeyler daha düzgün şişirilir.
+
+🔹 Mirror Editing
+Eğer aynalama (Mirror Modifier) kullanıyorsan, düzenlemeyi ayna tarafına da otomatik uygular.
+
+X aynası gibi davranır.
+
+
+🔹 Proportional Editing
+Etrafındaki vertex’leri de yumuşak bir şekilde etkiler.
+
+Bu sayede geçişler daha organik olur.
+
+🔹 Proportional Falloff (Smooth)
+Etki şekli: Smooth, Sharp, Root, Linear, Constant gibi seçenekler sunar.
+
+Smooth, en yaygın ve yumuşak geçiş sağlayandır.
+
+Başka bir deyişle: Değişiklik merkeze yakın vertex'leri daha fazla, uzaktakileri daha az etkiler.
+
+🔹 Proportional Size
+Etki alanının çapı (mouse tekerleği ile sahnede ayarlanabilir)
+
+Yani bu sayı arttıkça, daha fazla vertex etkilenir.
+
+🔹 Connected
+Sadece birbirine bağlı vertex’lerin etkilenmesini sağlar.
+
+Parçalanmış mesh’lerde çok işine yarar.
+
+🔹 Projected (2D)
+2D ekran görünümüne göre etkiler.
+
+Özellikle plan görünümlü çalışmalarda kullanılabilir.
+
