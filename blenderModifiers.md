@@ -47,7 +47,9 @@ Vertex Weight Proximity: Diğer bir objeye olan uzaklığa göre vertex ağırl�
 
 🧱 GENERATE (Yeni Şekil ve Yapı Üreten Modifier'lar) Objenin genel görünümünü ve geometrisini değiştirir. Yapıcı ve yıkıcı etkileri bulunmaktadır. Bir nevi mevcut geometriden yeni geometri oluşturan veya çoğaltan modifiye edicileri içerir. 
 
-Array Modifiers : Objeyi belirli eksenlerde çoğaltır.
+### 🔷 Array Modifiers
+ 
+  Objeyi belirli eksenlerde çoğaltır.
 
  <img src="./assets/array.png" alt="alt yazı" width="200">
 
@@ -77,7 +79,45 @@ Z: 0.000: Z ekseninde herhangi bir öteleme olmaz.
 
 🔴 UVs: Bu bölüm de genişletilebilir. Dizi oluşturulurken UV haritalarının nasıl işleneceğini kontrol eden seçenekleri içerir.
 
-🔴 Caps (Kaplamalar): Bu bölüm de genişletilebilir. Açık uçlu dizilerin (örneğin bir eğri boyunca oluşturulan dizi) başlangıcına ve sonuna kapaklar eklemek için seçenekler sunar.
+🔴 Caps (Kaplamalar): Arrayi oluşturduktan sonra sona gelen elemanı buraya eklerseniz bu eleman şeklin sonuna eklenir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🔷 Bevel
+
+ Kenarları yumuşatır/kırar. Gerçekçi modellemeler için çok kullanılır.
+
+## 🔷 Boolean
+ Objeyi başka bir objeyle keser, birleştirir veya çıkarır.
+
+
+
+
+Intersect (Kesişim): Bu seçenek seçildiğinde, sonuç olarak yalnızca iki nesnenin ortak hacmi (nerede birbirleriyle kesişiyorlarsa) kalır. Diğer kısımlar kaybolur. Şu anda bu seçenek seçili değil.
+
+Union (Birleşim): Bu seçenek seçildiğinde, iki nesnenin tüm hacimleri birleştirilerek tek bir yeni nesne oluşturulur. Nesnelerin birbirine değdiği veya kesiştiği yerlerdeki iç kenarlar genellikle kaybolur. Şu anda bu seçenek mavi renkle vurgulanmış, yani aktif olan işlem türü Birleşim.
+
+Difference (Fark): Bu seçenek seçildiğinde, seçilen ikinci nesnenin hacmi, ilk nesnenin hacminden çıkarılır. Hangi nesnenin "ilk" ve hangisinin "ikinci" olduğunu aşağıdaki "Object" ayarı belirler.
+
+Operand Type (İşlenen Türü): Bu bölüm, mantıksal işlemde kullanılacak ikinci nesnenin nasıl seçileceğini belirler. Şu anda Object (Nesne) seçili.
+
+Object (Nesne): Mantıksal işlem için sahnede bulunan belirli bir örgü nesnesini seçmenizi sağlar. Altındaki Object (Nesne) alanında şu anda Icosphere adlı bir nesnenin seçili olduğunu görüyoruz. Bu, mantıksal işlemin seçili olan ana nesne ile "Icosphere" adlı nesne arasında yapılacağı anlamına gelir. Yanındaki "X" işaretine tıklayarak bu nesneyi kaldırabilirsiniz.
+Solver (Çözücü): Bu bölüm, Blender'ın mantıksal işlemi gerçekleştirmek için kullandığı algoritmayı belirler. Şu anda Exact (Kesin) seçili.
+
+Fast (Hızlı): Genellikle daha hızlı sonuçlar verir ancak bazı durumlarda geometride hatalar veya beklenmeyen sonuçlar oluşabilir.
+Exact (Kesin): Daha doğru sonuçlar üretmeye odaklanır ancak "Fast" seçeneğine göre daha fazla işlem gücü gerektirebilir ve daha uzun sürebilir. Özellikle karmaşık geometrilerde "Exact" çözücüsü genellikle daha iyi sonuçlar verir. Şu anda mavi renkle vurgulanmış, yani aktif olan çözücü türü Kesin.
+Solver Options (Çözücü Seçenekleri): Yanındaki ">" işaretine tıklayarak bu bölümü genişletebilirsiniz. Burada seçilen çözücüye özgü ek ayarlar bulunabilir (ekranda şu anda kapalı).
 
 
 
@@ -93,9 +133,11 @@ Z: 0.000: Z ekseninde herhangi bir öteleme olmaz.
 
 
 
-Bevel: Kenarları yumuşatır/kırar. Gerçekçi modellemeler için çok kullanılır.
 
-Boolean: Objeyi başka bir objeyle keser, birleştirir veya çıkarır.
+
+
+
+
 
 Build: Objenin görünmesini zamanla kontrol eder (animasyon gibi).
 
