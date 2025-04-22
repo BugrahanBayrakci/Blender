@@ -197,9 +197,75 @@ Screw: Objeyi dönerek uzatır; spiral ya da vidalı şekiller üretir.
 
 Skin: Noktalardan iskelet benzeri bir yapı oluşturur (basit karakter modelleme için).
 
-Solidify: İnce yüzeylere kalınlık verir.
+Solidify: İnce yüzeylere kalınlık verir. Extrude işlemi ile birebir aynı şeyleri yapıyor.
+
+ <img src="./assets/solidify.png" alt="alt yazı" width="300">
+
+
+
+Mode (Mod): Bu açılır menü, katılaştırma işleminin farklı yöntemlerini sunar. Şu anda Simple (Basit) modu seçili. Diğer modlar daha karmaşık geometriler için ek seçenekler sunar.
+
+
+Thickness (Kalınlık): Bu değer, nesneye eklenecek olan kalınlığı belirler. Şu anda 0.01 m olarak ayarlanmış, yani nesneye 1 santimetre kalınlık eklenecek.
+
+Offset (Uzaklık): Bu değer, orijinal yüzeyden kalınlığın hangi yönde uygulanacağını kontrol eder.
+
+-1.0000: Bu değer, kalınlığın tamamen orijinal yüzeyin içine doğru uygulanacağı anlamına gelir.
+0: Kalınlık eşit olarak hem içe hem de dışa doğru uygulanır.
+1: Kalınlık tamamen orijinal yüzeyin dışına doğru uygulanır.
+Even Thickness (Eşit Kalınlık): Bu kutucuk işaretlenirse, karmaşık geometrilerde bile kalınlığın her yerde eşit olmasını sağlar. İşaretli değilse, bazı bölgelerde kalınlık farklılık gösterebilir. Şu anda bu seçenek işaretli değil.
+
+Rim (Kenar): Bu bölüm, katılaştırılmış nesnenin kenarlarıyla ilgili ayarları içerir.
+
+even tickness daha düzgün 
+Fill (Doldur): Bu kutucuk işaretlenirse, katılaştırılmış nesnenin açık kenarları (eğer varsa) yeni yüzeylerle doldurulur. Şu anda bu seçenek işaretli.
+Only Rim (Sadece Kenar): Bu seçenek işaretlenirse, sadece kenarlar oluşturulur ve orijinal yüzeyler ile eklenen kalınlık arasındaki bağlantı yüzeyleri oluşturulmaz. Şu anda bu seçenek işaretli değil.
+Vertex Group (Köşe Grubu): Bu alan, katılaştırma işleminin yalnızca belirli bir köşe grubuna uygulanmasını sağlar. Şu anda herhangi bir köşe grubu seçili değil.
+
+Factor (Faktör): Köşe grubu kullanılıyorsa, bu değer köşe grubunun kalınlık üzerindeki etkisini kontrol eder. Şu anda 0.000 olarak ayarlanmış, bu da köşe grubunun herhangi bir etkisi olmayacağı anlamına gelir.
+
+Alt kısımda ise "Solidify" değiştiricisiyle ilgili daha gelişmiş ayarları içeren katlanabilir menüler bulunuyor:
+
+Normals (Normaller)
+Materials (Materyaller)
+Edge Data (Kenar Verisi)
+Thickness Clamp (Kalınlık Sınırlandırması)
+Output Vertex Groups (Çıktı Köşe Grupları)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Subdivision Surface: Mesh’i daha fazla subdivide eder, pürüzsüz hale getirir.
+
+
+ <img src="./assets/Subdivision.PNG
+" alt="alt yazı" width="300">
+Subdivision (Alt Bölme): Değiştiricinin adı.
+
+Catmull-Clark: Bu, alt bölme algoritmasıdır. Gördüğümüz gibi, en yaygın ve genellikle en iyi sonuçları veren algoritma olan Catmull-Clark seçilmiş durumda (mavi renkte). Bu algoritma, yüzeyleri daha yumuşak ve organik hale getirir. 
+
+Simple sadece yüzeyleri böler ancak herhangi bir pürüzsüzleştirme uygulamaz. Genellikle belirli geometrik efektler için kullanılır.
+
+Levels Viewport (Görünüm Alanı Seviyeleri): Bu değer, değiştiricinin 3D görünüm alanında kaç kez alt bölme işlemi uygulayacağını belirtir. Şu anda bu değer 4 olarak ayarlanmış. Bu, modelin görünüm alanında oldukça pürüzsüz görüneceği anlamına gelir. Ancak yüksek değerler performansı olumsuz etkileyebilir.
+
+Render: Bu değer, modelin render edildiğinde kaç kez alt bölme işlemi uygulanacağını belirtir. Render aşamasında genellikle görünüm alanı seviyesinden daha yüksek bir değer kullanılır çünkü render çıktısında daha fazla detay ve pürüzsüzlük istenir. Ancak çok yüksek değerler render süresini uzatabilir.
+
+Optimal Display (Optimal Görüntüleme): Bu kutucuk işaretli durumda. Bu seçenek, alt bölme işlemi sonucunda oluşan yeni kenarları gizleyerek modelin daha temiz ve orijinal düşük poligonlu yapısını daha iyi gösterir. Modelleme sırasında daha net bir önizleme sağlar.
+
+Advanced (Gelişmiş): Bu katlanabilir menü, alt bölme işlemiyle ilgili daha detaylı ayarlar içeri.
+
 
 Triangulate: Tüm yüzeyleri üçgene dönüştürür.
 
