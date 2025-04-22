@@ -88,12 +88,6 @@ Z: 0.000: Z ekseninde herhangi bir öteleme olmaz.
 
 
 
-
-
-
-
-
-
 ## 🔷 Bevel
 
  Kenarları yumuşatır/kırar. Gerçekçi modellemeler için çok kullanılır.
@@ -101,6 +95,7 @@ Z: 0.000: Z ekseninde herhangi bir öteleme olmaz.
 ## 🔷 Boolean
  Objeyi başka bir objeyle keser, birleştirir veya çıkarır.
 
+ <img src="./assets/booleanmod.png" alt="alt yazı" width="400">
 
 
 
@@ -120,28 +115,33 @@ Exact (Kesin): Daha doğru sonuçlar üretmeye odaklanır ancak "Fast" seçeneğ
 Solver Options (Çözücü Seçenekleri): Yanındaki ">" işaretine tıklayarak bu bölümü genişletebilirsiniz. Burada seçilen çözücüye özgü ek ayarlar bulunabilir (ekranda şu anda kapalı).
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Build: Objenin görünmesini zamanla kontrol eder (animasyon gibi).
 
+#### DECİMATE 
 Decimate: Poligon sayısını azaltır. Düşük çözünürlük gerekliyse kullanılır.
+ <img src="./assets/decimatemod.png" alt="alt yazı" width="300">
+
+
+🔥 Collapse (Çökert): Bu mod, kenarları ve yüzleri birleştirerek poligon sayısını azaltır. Şu anda bu seçenek seçili durumda (mavi renkte). Çok yüksek sayıda ve üçgenlerden oluşanlarda daha uygun olur.
+
+🔥 Un-Subdivide (Alt Bölmeyi Geri Al): Bu mod, daha önce yapılmış alt bölme (Subdivision Surface) işlemlerini geri almaya çalışır.
+
+🔥 Planar (Düzlemsel): Bu mod, düzlemsel yüzleri birleştirerek poligon sayısını azaltır.
+
+
+ 1. Ratio (Oran): Bu değer, orijinal poligon sayısının ne kadarının korunacağını belirler. Şu anda 1.0000 olarak ayarlanmış, bu da herhangi bir seyreltme yapılmayacağı anlamına gelir. Bu değeri düşürdükçe poligon sayısı azalır.
+
+2. Symmetry (Simetri): Bu seçenekler (X, Y, Z), seyreltme işleminin belirtilen eksenler boyunca simetrik olarak uygulanıp uygulanmayacağını kontrol eder.
+
+3.  Triangulate (Üçgenleştir): Bu kutucuk işaretlenirse, tüm yüzler üçgenlere dönüştürülerek seyreltme işlemi yapılır.
+
+4. Vertex Group (Köşe Grubu): Bu alan, seyreltme işleminin yalnızca belirli bir köşe grubuna uygulanmasını sağlar.
+
+5. Factor (Faktör): Köşe grubu kullanılıyorsa, bu değer köşe grubunun etkisini kontrol eder. Şu anda 1.0000 olarak ayarlanmış, bu da köşe grubunun tam etkili olacağı anlamına gelir.
+
+
+
+
 
 Edge Split: Sert kenarları bölerek shading'i etkiler (autosmooth ile birlikte çalışır).
 
@@ -150,6 +150,44 @@ Geometry Nodes: Blender’ın node tabanlı sistemidir, çok güçlü procedural
 Mask: Objenin vertex gruplarına göre bir kısmını gizler.
 
 Mirror: Simetrik modelleme için objeyi yansıtır.
+
+🔹 Axis (Eksen)
+X, Y, Z: Nesnenin hangi eksene göre yansıtılacağını seçersin.
+
+Örneğin sadece X işaretliyse, nesne X eksenine göre yansıtılır.
+
+İstersen birden fazla ekseni de aynı anda seçebilirsin (örneğin hem X hem Y).
+
+🔹 Bisect 
+Seçilen eksen boyunca orijinal geometrinin bir kısmını kesip sadece yansıyan kısmı bırakır. iç içe girirlerse giren kısmı siliyor gibi
+
+
+🔹 Flip 
+İç içe giren objelerin kesiştiği alanı yeni obje yapar.
+
+🔹 Mirror Object (Ayna Nesnesi)
+Bu alana başka bir nesne atanarak, yansıtma ekseni o nesnenin pozisyonuna göre belirlenebilir.
+
+Yani, yansıma sabit eksene göre değil, bu nesneye göre olur.
+
+🔹 Clipping (Klip Yapışması)
+Orijinal ve yansıtılmış geometri merkezde çakıştığında onları birleştirir. Yüzün sağıyla solunu birleştirir gibi düşünebiliriz.
+
+Eğer aktifse, merkezden geçen vertex’leri hareket ettiremezsin; yapışık kalırlar.
+
+Temiz simetrik modelleme için çok faydalı.
+
+🔹 Merge (Birleştir)
+Merkezde bir araya gelen vertex'leri otomatik birleştirir.
+
+Yanındaki mesafe kutusunda (örneğin 0.001 m), ne kadar yakın vertex’lerin birleştirileceği ayarlanır.
+
+🔹 Bisect Distance
+Bisect seçeneği aktifse, bu alan hangi uzaklıkta kesileceğini belirler.
+
+Bu örnekte gri, çünkü Bisect açık değil.
+
+
 
 Multiresolution: Sculpting için ideal. Farklı çözünürlük seviyelerinde çalışmanı sağlar.
 
