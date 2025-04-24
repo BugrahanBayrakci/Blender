@@ -115,7 +115,8 @@ Exact (Kesin): Daha doğru sonuçlar üretmeye odaklanır ancak "Fast" seçeneğ
 Solver Options (Çözücü Seçenekleri): Yanındaki ">" işaretine tıklayarak bu bölümü genişletebilirsiniz. Burada seçilen çözücüye özgü ek ayarlar bulunabilir (ekranda şu anda kapalı).
 
 
-Build: Objenin görünmesini zamanla kontrol eder (animasyon gibi).
+Build: Animasyon oluşturmaya yarar.
+
 
 #### DECİMATE 
 Decimate: Poligon sayısını azaltır. Düşük çözünürlük gerekliyse kullanılır.
@@ -306,7 +307,29 @@ Cast: Objeyi küre, küp ya da silindire benzetecek şekilde şekillendirir.
 
 Curve: Objenin bir eğri boyunca bükülmesini sağlar.
 
-Displace: Texture verisiyle objeyi yukarı-aşağı iter (yükseklik map gibi).
+Displace: Texture verisiyle objeyi yukarı-aşağı iter.
+
+Texture (Doku): Bu kısımda, yer değiştirme işlemini kontrol edecek olan dokuyu seçersiniz. Yeni bir doku oluşturabilir veya mevcut bir dokuyu kullanabilirsiniz. Doku, gri tonlamalı bir görüntü olabilir; beyaz kısımlar nesneyi pozitif yönde, siyah kısımlar negatif yönde, gri tonlar ise bu iki değer arasında bir yer değiştirme uygular.
+
+Coordinates (Koordinatlar): Bu açılır menü, dokunun nesne üzerindeki yerleşimini nasıl belirleyeceğinizi seçmenizi sağlar:
+
+Local (Yerel): Dokuyu nesnenin kendi yerel koordinat sistemine göre uygular. Nesneyi taşıdığınızda veya döndürdüğünüzde doku da onunla birlikte hareket eder.
+Global (Küresel): Dokuyu küresel koordinat sistemine göre uygular. Nesneyi hareket ettirseniz bile dokunun konumu sabit kalır.
+Object (Nesne): Dokuyu başka bir nesnenin koordinat sistemine göre uygular. Bu, dokuyu bir "kontrol nesnesi" kullanarak yönlendirmenizi sağlar. Bu seçeneği seçtiğinizde, altında bir "Object" (Nesne) alanı belirir ve buradan kontrol nesnesini seçebilirsiniz.
+UV: Dokuyu nesnenin UV haritasına göre uygular. Bu, dokunun nesnenin yüzeyine nasıl sarılacağını kontrol etmenizi sağlar. Bu seçeneği seçtiğinizde, altında hangi UV katmanının kullanılacağını seçebileceğiniz bir alan belirir.
+Generated (Oluşturulmuş): Dokuyu nesnenin sınır kutusuna (bounding box) göre otomatik olarak oluşturulan koordinatlara göre uygular.
+Camera (Kamera): Dokuyu aktif kameranın görüşüne göre uygular.
+Direction (Yön): Bu açılır menü, yer değiştirmenin hangi yönde gerçekleşeceğini belirler:
+
+Normal (Normal): Yer değiştirme, yüzeylerin normal vektörleri boyunca (yüzeye dik yönde) gerçekleşir. Bu en yaygın kullanılan seçenektir.
+X, Y, Z: Yer değiştirme sadece belirtilen eksen boyunca gerçekleşir. Bu, belirli bir yönde şekil bozuklukları oluşturmak istediğinizde kullanışlıdır.
+Strength (Güç): Bu değer, yer değiştirmenin ne kadar güçlü olacağını kontrol eder. Yüksek değerler daha belirgin şekil bozukluklarına yol açarken, düşük değerler daha ince değişiklikler yapar. Bu değer negatif de olabilir, bu durumda yer değiştirme seçilen yönde içeri doğru olur.
+
+Midlevel (Orta Seviye): Bu değer, dokunun "orta" noktasını tanımlar. Genellikle 0.5 değerine ayarlanır. Gri tonlamalı bir dokuda, bu değerin üzerindeki parlaklıklar pozitif yönde, altındaki karanlıklar negatif yönde yer değiştirmeye neden olur. Bu değeri değiştirerek yer değiştirmenin genel "yüksekliğini" ayarlayabilirsiniz.
+
+Vertex Group (Vertex Grubu): İsteğe bağlı olarak, yer değiştirme işlemini sadece belirli bir vertex grubuna uygulayabilirsiniz. Buraya bir vertex grubu seçerseniz, yer değiştirme sadece o gruptaki vertexleri etkiler ve grubun ağırlıklarına göre etkisi değişir.
+
+
 
 Hook: Belirli vertexleri bir boş objeyle (empty) kontrol etmene yarar.
 
