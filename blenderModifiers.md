@@ -135,6 +135,26 @@ Decimate: Poligon sayısını azaltır. Düşük çözünürlük gerekliyse kull
 
 3.  Triangulate (Üçgenleştir): Bu kutucuk işaretlenirse, tüm yüzler üçgenlere dönüştürülerek seyreltme işlemi yapılır.
 
+ <img src="./assets/TRAİNGULATE.png
+" alt="alt yazı" width="300">
+
+    
+  - 🔷 Beauty (Güzellik): Bu metot, mümkün olduğunca düzgün ve estetik görünümlü üçgenler oluşturmaya çalışır. Genellikle yüzeyin akışını takip eden kenarlar seçilir. Karmaşık dörtgenler için iyi bir sonuç verebilir.
+
+  - 🔷 Fixed (Sabit): Bu metot, dörtgenin ilk ve üçüncü köşelerini (dizideki sırasına göre) birleştirerek bir üçgen oluşturur. Her zaman aynı köşeleri birleştirdiği için tutarlı sonuçlar verir.
+
+- 🔷 Fixed Alternate (Sabit Alternatif): Bu metot ise "Fixed" metodunun tam tersi olarak, dörtgenin ikinci ve dördüncü köşelerini birleştirerek bir üçgen oluşturur. Bu da tutarlı ancak farklı bir üçgenleme şekli sunar.
+
+- 🔷Shortest Diagonal (En Kısa Köşegen): Adından da anlaşılacağı gibi, bu metot dörtgenin iki köşegeni arasındaki en kısa olanı seçerek üçgenleri oluşturur. Genellikle daha düzgün ve az bozulmuş üçgenler elde edilmesini sağlar.
+
+- 🔷Longest Diagonal (En Uzun Köşegen): Bu metot ise "Shortest Diagonal" metodunun tam tersi olarak, dörtgenin en uzun köşegenini kullanarak üçgenleri oluşturur. Özel durumlar veya belirli efektler için tercih edilebilir.
+
+- 🔷Quad Method (Dörtgen Metodu): Bu seçenek, aslında bir metot değil, mevcut dörtgen yapısını korumaya çalışır. Eğer seçili dörtgenler zaten beklenen şekildeyse, bu seçeneği kullanarak üçgenlemeyi atlayabilirsiniz. Ancak "Triangulate" aracının temel amacı dörtgenleri üçgenlere çevirmek olduğu için, bu seçenek diğer metotlarla birlikte veya özel senaryolarda kullanılabilir.
+
+
+
+
+
 4. Vertex Group (Köşe Grubu): Bu alan, seyreltme işleminin yalnızca belirli bir köşe grubuna uygulanmasını sağlar.
 
 5. Factor (Faktör): Köşe grubu kullanılıyorsa, bu değer köşe grubunun etkisini kontrol eder. Şu anda 1.0000 olarak ayarlanmış, bu da köşe grubunun tam etkili olacağı anlamına gelir.
