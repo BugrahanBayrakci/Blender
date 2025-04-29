@@ -341,7 +341,28 @@ Mesh Deform: Dışarıdan bir kafesle (cage) objeyi sarar ve bu kafesi hareket e
 
 Shrinkwrap: Objenin yüzeyini başka bir objeye yapıştırır (örneğin bir yazıyı bir yüzeye sarma).
 
-Simple Deform: Twist, Bend, Taper gibi temel deformasyonlar sağlar.
+Simple Deform:  Simple Deform, bir nesneyi bükmek, döndürmek, inceltmek veya uzatmak için kullanılanbir modifier .
+
+Bend (Bükme) — Nesneyi bir eksen etrafında kıvırır.
+
+Twist (Döndürme) — Nesnenin bir eksen boyunca burulmasını sağlar.
+
+Taper (İnceltme/Genişletme) — Bir eksen boyunca nesnenin bir ucunu inceltir ya da kalınlaştırır.
+
+Stretch (Gerdirme) — Nesneyi bir eksen boyunca uzatır ya da sıkar.
+
+Nasıl kullanılır:
+
+Nesneni seç.
+
+Sağdaki menüden Modifiers sekmesine (anahtar simgesi) git.
+
+Add Modifier → Simple Deform seç.
+
+İstediğin Deform Tipini (Bend, Twist, Taper, Stretch) seç.
+
+Açılan ayarları kullanarak Açı veya Faktör gibi değerlerle oyna.
+
 
 Smooth: Vertex'leri birbirine yaklaştırarak objeyi yumuşatır.
 
