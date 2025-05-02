@@ -1,6 +1,6 @@
 UV Editing ve Wrapping İşlemleri – Blender
 1. Giriş
-3D modelleme sürecinde, modellerin üzerine doku (texture) kaplamak için UV Mapping işlemi büyük önem taşır. UV Mapping, bir 3B modelin yüzeyinin 2B bir düzleme açılması işlemidir. Bu işlem sayesinde, dokular modelin yüzeyine doğru ve düzgün bir şekilde uygulanabilir. Blender gibi 3B modelleme yazılımları, bu işlemi kullanıcıya hem otomatik hem de manuel olarak gerçekleştirme imkânı sunar. UV Editing ise bu süreçte oluşturulan UV haritalarının düzenlenmesi işlemidir.
+3D modelleme sürecinde, modellerin üzerine doku (texture) kaplamak için UV Mapping işlemi büyük önem taşır. UV Mapping, bir 3B modelin yüzeyinin 2B bir düzleme açılması işlemidir. Bu işlem sayesinde, dokular modelin yüzeyine doğru ve düzgün bir şekilde uygulanabilir. Blender  bu işlemi kullanıcıya hem otomatik hem de manuel olarak gerçekleştirme imkânı sunar. UV Editing ise bu süreçte oluşturulan UV haritalarının düzenlenmesi işlemidir.
 
 2. UV Mapping Nedir?
 UV Mapping, 3B bir nesnenin yüzey koordinatlarının, 2B bir düzlemde temsil edilmesini sağlar. Bu işlem sırasında, 3B modelin yüzeyi "unwrap" edilir, yani adeta bir kağıt gibi açılarak düzleştirilir. Bu düzleştirme sonucunda ortaya çıkan UV haritası üzerinde 2B dokular, modelin ilgili bölgelerine denk gelecek şekilde yerleştirilir.
